@@ -1,4 +1,4 @@
-def call(String buildStatus = 'STARTED') {
+def call(String buildStatus = 'START') {
   // build status of null means successful
   //This is the condition which we are checking weather buildStatus is SUCCESSFULL or not.
  //This line updated to show the Eclipse with GitHub demo
@@ -11,7 +11,7 @@ def call(String buildStatus = 'STARTED') {
   def summary = "${subject} (${env.BUILD_URL})"
 
   // Override default values based on build status
-  if (buildStatus == 'STARTED') {
+  if (buildStatus == 'START') {
     color = 'YELLOW'
     colorCode = '#FFFF00'
   } else if (buildStatus == 'SUCCESS') {
